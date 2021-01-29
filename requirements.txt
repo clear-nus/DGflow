@@ -1,0 +1,9 @@
+tensorflow-gpu==1.14.0
+cupy-cuda100==7.6.0 # Change according to your CUDA version
+torch==1.6.0
+torchvision==0.7.0
+chainer==7.2.0
+PyYAML>=5.3.1
+Pillow>=7.2.0
+tqdm>=4.46.0
+scipy>=1.4.1

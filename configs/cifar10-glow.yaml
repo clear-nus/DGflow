@@ -1,0 +1,20 @@
+dataset: cifar10
+image_size: 32
+eval_file_prefix: CIFAR
+gen_type: t_glow
+gen_path: trained_models/glow-cifar10.pt
+glow_params: trained_models/hparams.json
+disc_type: c_sndcgan
+disc_path: trained_models/DCGAN_D_CIFAR_SNGAN_NonSaturating_150001.npz
+corr_type: null # t_sndcgan
+corr_path: null # trained_models/glow-cifar10-corr.pth
+f_div: KL
+eta: 0.05
+gamma: 0.01
+save_interval: 5
+keep_samples: true
+steps: 25
+bottom_width: 4
+num_imgs: 10000
+batch_size: 50
+exp_root: ./exps/
