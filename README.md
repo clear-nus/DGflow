@@ -4,7 +4,28 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Venue:ICLR 2021](https://img.shields.io/badge/Venue-ICLR%202021-007CFF)](https://openreview.net/forum?id=Zbc-ue9p_rE)
 
-This repository contains code for reproducing the experiments presented in the ICLR 2021 paper *[Refining Deep Generative Models via Discriminator Gradient Flow](https://openreview.net/forum?id=Zbc-ue9p_rE)*.
+<p align="center">
+  <img src="./assets/dgflow.jpg" width="30%">
+  <br />
+  <span>Fig 1. An illustration of refinement using DGflow, with the gradient flow in the 2-Wasserstein space (top) and the corresponding discretized SDE in the latent space (bottom).</span>
+</p>
+
+This repository contains code for reproducing the experiments presented in the ICLR 2021 paper *[Refining Deep Generative Models via Discriminator Gradient Flow](https://openreview.net/forum?id=Zbc-ue9p_rE)*. In this paper, we propose DGflow, a technique to improve samples from deep generative models using the gradient flow of entropy-regularized f-divergences between the generated and real data distributions. The gradient flow has an equivalent Stochastic Differential Equation (SDE) which can be simulated using the Euler-Maruyama method. We simulate the SDE in the latent space of the generative model as follows:
+
+<p align="center">
+  <img src="./assets/sde.jpg" width="400">
+</p>
+
+The density ratio term in the above equation is estimated using a pretrained discriminator. 
+
+We further propose a technique to extend DGflow to deep generative models lacking a corresponding discriminator such as VAEs, Normalizing Flows, and GANs with vector-valued critics. For such generative models, we use a (pretrained) discriminator trained on the same dataset as the generative model combined with a density ratio corrector which corrects the density ratio estimate. Please check out [the paper](https://openreview.net/forum?id=Zbc-ue9p_rE) for more details and empirical results.
+
+<p float="left" align="center">
+  <img src="./assets/refine_cifar.png" width="25%">
+  <img src="./assets/refine_stl.png" width="25%">
+  <br />
+  <span>Fig 2. Improvement in the quality of samples generated from the base model (leftmost columns) over the steps of DGflow for the CIFAR10 (left) and STL10 (right) datasets.</span>
+<p>
 
 ## Environment Setup
 
