@@ -28,6 +28,8 @@ We further propose a technique to extend DGflow to deep generative models lackin
   <br />
   <span>Fig 2. Improvement in the quality of samples generated from the base model (leftmost columns) over the steps of DGflow for the CIFAR10 (left) and STL10 (right) datasets.</span>
 <p>
+  
+_____
 
 ## Environment Setup
 
