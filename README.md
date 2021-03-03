@@ -122,6 +122,7 @@ This repo contains code that's based on the following repos:
 | [AkinoriTanaka-phys/DOT](https://github.com/AkinoriTanaka-phys/DOT)  |  2019 AkinoriTanaka-phys  | [MIT License](https://github.com/AkinoriTanaka-phys/DOT/blob/master/LICENSE) |
 | [pfnet-research/sngan_projection](https://github.com/pfnet-research/sngan_projection)  | 2018 Preferred Networks, Inc.  | [MIT License](https://github.com/pfnet-research/sngan_projection/blob/master/LICENSE.md) |
 | [pfnet-research/chainer-gan-lib](https://github.com/pfnet-research/chainer-gan-lib) | 2017 pfnet-research  | [MIT License](https://github.com/pfnet-research/chainer-gan-lib/blob/master/LICENSE) |
+| [xjtuygao/VGrow](https://github.com/xjtuygao/VGrow) | 2019 xjtuygao | NA |
 
 ### References
 **[Miyato et al., 2018]** Takeru Miyato, Toshiki Kataoka, Masanori Koyama, and Yuichi Yoshida. Spectral normalization for generative adversarial networks. In ICLR, 2018.    
